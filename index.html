@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>การใช้ DIV กับ CSS</title>
+        <style type="text/css">
+            #t-body {
+                width:800px;/*ขนาดความกว้างของเพจ*/
+                margin:0px auto;
+            }
+            #header{ margin:0 0 10px 0; padding:10px; height:100px; background-color:#FF0000;}/* margin: บน ขวา ล่าง ซ้าย; ตามเข็มนาฬิกาครับ*/
+            #left{ float:left; width:200px; margin:0 0 10px 0; height:200px;}
+            #content{ float:right; width:590px; margin:0 0 10px 10px; height:200px; background-color:#00FFCC;}
+            #footer{clear:both; padding:20px; height:40px; background-color:#00FF00;}
+            ul,li {
+                list-style:none;
+                margin:0;
+                padding:0;
+            }
+            #menu {
+                border:solid 1px #f5f5f5;
+            }
+            .menu {
+                background-image:url(blue-grad.png);
+                font-size:14px;
+                height:22px;
+                margin:0;
+                padding:2px 0 0 10px;
+            }
+            .menu-sub1 {
+                border-bottom:solid 1px #f5f5f5;
+                cursor:pointer;
+                font-size:12px;
+                margin:1px 0;
+                padding:0 0 1px 20px;
+            }
+            .menu-sub2 {
+                background-image:url(blue-grad.png);
+                border-bottom:solid 1px #f5f5f5;
+                cursor:pointer;
+                font-size:12px;
+                margin:1px 0;
+                padding:0 0 1px 20px;
+            }
+            .menu img,.menu-sub1 img,.menu-sub2 img {
+                border:none;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="t-body">
+            <div id="header">Head</div>
+            <div id="left">
+                <div id="menu">
+                    <ul>
+                        <li>Menu</li>
+                        <li onmouseover="this.className = menu-sub2" onmouseout="this.className = 'menu-sub1'" onclick="this.className = 'menu-sub2'"><a href="#">Home</a></li>
+                        <li onmouseover="this.className = menu-sub2" onmouseout="this.className = 'menu-sub1'" onclick="this.className = 'menu-sub2'"><a href="#">Profile</a></li>
+                        <li onmouseover="this.className = menu-sub2" onmouseout="this.className = 'menu-sub1'" onclick="this.className = 'menu-sub2'"><a href="#">About</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="content">Content</div>
+            <div id="footer">footer</div>
+        </div>
+    </body>
+</html>
